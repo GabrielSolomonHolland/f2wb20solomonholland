@@ -21,9 +21,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //default
-//app.use('/', indexRouter);
-//app.use('/', vehicleRouter);
-app.use('/', gridbuildRouter);
+app.use('/', indexRouter);
+app.use('/vehicle', vehicleRouter);
+app.use('/gridbuild', gridbuildRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
